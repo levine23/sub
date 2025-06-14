@@ -8,18 +8,18 @@ from logging.handlers import RotatingFileHandler
 
 load_dotenv("config.env")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8153820960:AAFZn_kT-QhK_l-lyESmdPTCSWZBdFJ7Z6Q")
 
-API_ID = int(os.environ.get("API_ID", "2040"))
-API_HASH = os.environ.get("API_HASH", "b18441a1ff607e10a989891a5462e627")
+API_ID = int(os.environ.get("API_ID", "27074717"))
+API_HASH = os.environ.get("API_HASH", "c91443b748be68477d9ee4995d30fd27")
 
-CHANNEL_DB = int(os.environ.get("CHANNEL_DB", ""))
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
+CHANNEL_DB = int(os.environ.get("CHANNEL_DB", "-1002783872261"))
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://pakeya2:userbot@cluster0.vva0b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 RESTRICT = strtobool(os.environ.get("RESTRICT", "True"))
 
-FORCE_SUB_1 = int(os.environ.get("FORCE_SUB_1", "0"))
-FORCE_SUB_2 = int(os.environ.get("FORCE_SUB_2", "0"))
+FORCE_SUB_1 = int(os.environ.get("FORCE_SUB_1", "-1002841696910"))
+FORCE_SUB_2 = int(os.environ.get("FORCE_SUB_2", "-1002528277069"))
 FORCE_SUB_3 = int(os.environ.get("FORCE_SUB_3", "0"))
 FORCE_SUB_4 = int(os.environ.get("FORCE_SUB_4", "0"))
 
@@ -27,17 +27,17 @@ WORKERS = int(os.environ.get("WORKERS", "4"))
 
 START_MESSAGE = os.environ.get(
     "START_MESSAGE",
-    "Halo {mention}!"
+    "Nape lu {mention}!"
     "\n\n"
-    "Saya dapat menyimpan file pribadi di Channel tertentu dan pengguna lain dapat mengaksesnya dari link khusus.",
+    "Jangan spam yee 😹",
 )
 FORCE_MESSAGE = os.environ.get(
     "FORCE_MESSAGE",
-    "Halo {mention}!"
+    "Alooo {mention}!"
     "\n\n"
-    "Anda harus bergabung di Channel/Group terlebih dahulu untuk melihat file yang saya bagikan."
+    "Lu harus masuk Channel/Group dulu ya "
     "\n\n"
-    "Silakan Join Ke Channel/Group terlebih dahulu.",
+    "Silhkan masuk dulu",
 )
 
 try:
