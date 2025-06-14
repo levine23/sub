@@ -47,84 +47,92 @@ class Bot(Client):
 
         if FORCE_SUB_1:
             try:
-                info = await self.get_chat(FORCE_SUB_1)
-                link = info.invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_1)
-                    link = info.invite_link
-                self.invitelink = link
-                self.LOGGER(__name__).info(
-                    "FORCE_SUB_1 Detected!\n"
-                    f"  Title: {info.title}\n"
-                    f"  Chat ID: {info.id}\n\n"
-                )
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning(
-                    f"Pastikan @{self.username} "
-                    "menjadi Admin di FORCE_SUB_1\n\n"
-                )
-                sys.exit()
+    info = await self.get_chat(FORCE_SUB_1)
+    member = await self.get_chat_member(FORCE_SUB_1, self.me.id)
+    if member.status not in ("administrator", "creator"):
+        raise ChatAdminRequired("Bot is not admin.")
+    try:
+        link = info.invite_link
+        if not link:
+            await self.export_chat_invite_link(FORCE_SUB_1)
+            info = await self.get_chat(FORCE_SUB_1)
+            link = info.invite_link
+        self.invitelink = link
+    except Exception as ex:
+        self.LOGGER(__name__).warning(f"Gagal membuat invite link: {ex}")
+        sys.exit()
+except PeerIdInvalid:
+    self.LOGGER(__name__).warning("Channel ID tidak valid.")
+    sys.exit()
+except ChatAdminRequired:
+    self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_1.")
+    sys.exit()
         if FORCE_SUB_2:
             try:
-                info = await self.get_chat(FORCE_SUB_2)
-                link = info.invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_2)
-                    link = info.invite_link
-                self.invitelink2 = link
-                self.LOGGER(__name__).info(
-                    "FORCE_SUB_2 Detected!\n"
-                    f"  Title: {info.title}\n"
-                    f"  Chat ID: {info.id}\n\n"
-                )
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning(
-                    f"Pastikan @{self.username} "
-                    "menjadi Admin di FORCE_SUB_2\n\n"
-                )
-                sys.exit()
+    info = await self.get_chat(FORCE_SUB_2)
+    member = await self.get_chat_member(FORCE_SUB_2, self.me.id)
+    if member.status not in ("administrator", "creator"):
+        raise ChatAdminRequired("Bot is not admin.")
+    try:
+        link = info.invite_link
+        if not link:
+            await self.export_chat_invite_link(FORCE_SUB_2)
+            info = await self.get_chat(FORCE_SUB_2)
+            link = info.invite_link
+        self.invitelink = link
+    except Exception as ex:
+        self.LOGGER(__name__).warning(f"Gagal membuat invite link: {ex}")
+        sys.exit()
+except PeerIdInvalid:
+    self.LOGGER(__name__).warning("Channel ID tidak valid.")
+    sys.exit()
+except ChatAdminRequired:
+    self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_2.")
+    sys.exit()
         if FORCE_SUB_3:
             try:
-                info = await self.get_chat(FORCE_SUB_3)
-                link = info.invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_1)
-                    link = info.invite_link
-                self.invitelink3 = link
-                self.LOGGER(__name__).info(
-                    "FORCE_SUB_3 Detected!\n"
-                    f"  Title: {info.title}\n"
-                    f"  Chat ID: {info.id}\n\n"
-                )
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning(
-                    f"Pastikan @{self.username} "
-                    "menjadi Admin di FORCE_SUB_3\n\n"
-                )
-                sys.exit()
+    info = await self.get_chat(FORCE_SUB_3)
+    member = await self.get_chat_member(FORCE_SUB_3, self.me.id)
+    if member.status not in ("administrator", "creator"):
+        raise ChatAdminRequired("Bot is not admin.")
+    try:
+        link = info.invite_link
+        if not link:
+            await self.export_chat_invite_link(FORCE_SUB_3)
+            info = await self.get_chat(FORCE_SUB_3)
+            link = info.invite_link
+        self.invitelink = link
+    except Exception as ex:
+        self.LOGGER(__name__).warning(f"Gagal membuat invite link: {ex}")
+        sys.exit()
+except PeerIdInvalid:
+    self.LOGGER(__name__).warning("Channel ID tidak valid.")
+    sys.exit()
+except ChatAdminRequired:
+    self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_3.")
+    sys.exit()
         if FORCE_SUB_4:
             try:
-                info = await self.get_chat(FORCE_SUB_4)
-                link = info.invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_4)
-                    link = info.invite_link
-                self.invitelink4 = link
-                self.LOGGER(__name__).info(
-                    "FORCE_SUB_4 Detected!\n"
-                    f"  Title: {info.title}\n"
-                    f"  Chat ID: {info.id}\n\n"
-                )
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning(
-                    f"Pastikan @{self.username} "
-                    "menjadi Admin di FORCE_SUB_4\n\n"
-                )
-                sys.exit()
+    info = await self.get_chat(FORCE_SUB_4)
+    member = await self.get_chat_member(FORCE_SUB_4, self.me.id)
+    if member.status not in ("administrator", "creator"):
+        raise ChatAdminRequired("Bot is not admin.")
+    try:
+        link = info.invite_link
+        if not link:
+            await self.export_chat_invite_link(FORCE_SUB_4)
+            info = await self.get_chat(FORCE_SUB_4)
+            link = info.invite_link
+        self.invitelink = link
+    except Exception as ex:
+        self.LOGGER(__name__).warning(f"Gagal membuat invite link: {ex}")
+        sys.exit()
+except PeerIdInvalid:
+    self.LOGGER(__name__).warning("Channel ID tidak valid.")
+    sys.exit()
+except ChatAdminRequired:
+    self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_4.")
+    sys.exit()
 
 
         try:
