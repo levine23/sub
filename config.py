@@ -8,13 +8,13 @@ from logging.handlers import RotatingFileHandler
 
 load_dotenv("config.env")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8153820960:AAFZn_kT-QhK_l-lyESmdPTCSWZBdFJ7Z6Q")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8153820960:AAEjKxqFf2HIBQIoZkMsrhFfiPWvt0tDhIs")
 
 API_ID = int(os.environ.get("API_ID", "27074717"))
 API_HASH = os.environ.get("API_HASH", "c91443b748be68477d9ee4995d30fd27")
 
 CHANNEL_DB = int(os.environ.get("CHANNEL_DB", "-1002783872261"))
-DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://pakeya2:userbot@cluster0.vva0b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://postgres.pvbvualbrektcismrzgh:adampakey23@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres")
 
 RESTRICT = strtobool(os.environ.get("RESTRICT", "True"))
 
