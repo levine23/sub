@@ -68,7 +68,6 @@ except ChatAdminRequired:
     self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_1.")
     sys.exit()
 
-
         if FORCE_SUB_2:
             try:
     info = await self.get_chat(FORCE_SUB_2)
@@ -92,7 +91,6 @@ except ChatAdminRequired:
     self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_2.")
     sys.exit()
 
-
         if FORCE_SUB_3:
             try:
     info = await self.get_chat(FORCE_SUB_3)
@@ -115,7 +113,6 @@ except PeerIdInvalid:
 except ChatAdminRequired:
     self.LOGGER(__name__).warning("Bot belum jadi admin di FORCE_SUB_3.")
     sys.exit()
-
 
         if FORCE_SUB_4:
             try:
